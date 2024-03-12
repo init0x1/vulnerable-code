@@ -1,6 +1,5 @@
 const express = require('express');
 const hackerRouter = require('./routes/api/hacker');
-const { welcomeMessage } = require('./controllers');
 const app = express();
 
 app.use(express.json());
@@ -12,8 +11,6 @@ app.get('/', (req, res) => {
 
 
 app.use('/', hackerRouter);
-
-
 
 app.set('view engine', 'ejs');
 
